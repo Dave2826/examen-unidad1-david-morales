@@ -1,0 +1,22 @@
+PREGUNTAS Y RESPUESTAS
+David Morales Guerrero
+
+-Explica dos diferencias entre una API REST y un servidor GraphQL.
+
+REST normalmente trabaja con varias rutas y cada ruta representa un recurso o una operación, mientras que GraphQL usa un solo punto de entrada y las consultas indican exactamente qué datos se necesitan. También REST puede devolver una respuesta definida por cada endpoint, mientras que GraphQL permite pedir diferentes campos de un mismo recurso en una sola consulta.
+
+-Indica una situación en la que conviene usar REST y otra en la que conviene usar GraphQL.
+
+REST conviene cuando una aplicación tiene recursos y operaciones claras, por ejemplo una API para administrar laptops con rutas para listar, consultar o crear registros. GraphQL conviene cuando el cliente necesita consultar diferentes datos relacionados y quiere pedir solamente los campos que necesita.
+
+-¿Qué diferencia hay entre una imagen y un contenedor? ¿Qué papel cumple el Dockerfile en esa relación?
+
+Una imagen es como una plantilla que contiene lo necesario para crear y ejecutar una aplicación. Un contenedor es una instancia de esa imagen que está ejecutándose. El Dockerfile sirve para indicar cómo construir la imagen, por ejemplo qué imagen base usar, qué archivos copiar, qué dependencias instalar y qué comando ejecutar.
+
+-¿Para qué sirve Docker Compose? En el mapeo 8000:8000, ¿qué representa el primer 8000 y qué representa el segundo?
+
+Docker Compose sirve para definir y levantar varios servicios relacionados de una aplicación, como la API y MySQL, usando un solo archivo. En 8000:8000, el primer 8000 es el puerto de la máquina que recibe las peticiones y el segundo 8000 es el puerto en el que escucha la aplicación dentro del contenedor.
+
+-¿Por qué las laptops del ejercicio 1 se guardan en MySQL y no en una lista de Python? ¿Qué identifica la llave primaria id?
+
+Se guardan en MySQL porque los datos deben permanecer aunque la API se detenga o se reinicie, mientras que una lista de Python solo mantiene los datos mientras el programa está ejecutándose. La llave primaria id identifica de forma única cada laptop dentro de la tabla.
